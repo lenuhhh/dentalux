@@ -1,0 +1,22 @@
+{
+  "name": "dentalux-vite-react",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:network": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.20.0",
+    "@supabase/supabase-js": "^2.38.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^8.0.10"
+  }
+}
