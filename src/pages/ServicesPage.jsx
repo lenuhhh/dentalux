@@ -86,7 +86,7 @@ const CARE_GUARANTEES = [
 
 const DOCTOR_VIDEO = [
   {
-    name: 'Анна Кравцова',
+    name: 'Андрій Кравченко',
     role: 'Імплантолог',
     video: 'https://www.youtube.com/embed/8w2xwR-MrXk',
   },

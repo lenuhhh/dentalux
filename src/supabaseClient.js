@@ -21,7 +21,7 @@ function fallbackSlots(date) {
   return base.map((time, idx) => ({
     id: `mock-slot-${date}-${idx}`,
     doctor_id: idx % 2 ? 1 : 2,
-    doctor_name: idx % 2 ? 'Катерина Романова' : 'Анна Кравцова',
+    doctor_name: idx % 2 ? 'Катерина Романова' : 'Андрій Кравченко',
     service_name: null,
     slot_date: date,
     slot_time: time,

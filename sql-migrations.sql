@@ -128,7 +128,7 @@ ON CONFLICT DO NOTHING;
 
 -- Вставка примеров врачей
 INSERT INTO doctors (name, role, experience_years, bio, specialties) VALUES
-('Анна Кравцова', 'Головний лікар, імплантолог', 12, 'Дбайлива хірургія, складні клінічні випадки', ARRAY['Імплантація', 'Хірургія']),
+('Андрій Кравченко', 'Головний лікар, імплантолог', 12, 'Дбайлива хірургія, складні клінічні випадки', ARRAY['Імплантація', 'Хірургія']),
 ('Михайло Осипов', 'Ортопед-гнатолог', 10, 'Відновлення прикусу та естетики при стиранні', ARRAY['Ортопедія', 'Гнатологія']),
 ('Катерина Романова', 'Ортодонт', 8, 'Елайнери, ортодонтія для дітей та дорослих', ARRAY['Ортодонтія', 'Педодонтія'])
 ON CONFLICT DO NOTHING;
@@ -468,7 +468,7 @@ END $$;
 -- Seed content MVP
 INSERT INTO clinic_cases (title, problem, before_image_url, after_image_url, description, duration, doctor_name) VALUES
 ('Кейс 01: Естетичне відновлення', 'Скол і потемніння', 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=80', 'Комплексна реставрація фронтальної групи зубів.', '14 днів', 'Михайло Осипов'),
-('Кейс 02: Імплантація', 'Відсутній зуб', 'https://images.unsplash.com/photo-1588776814546-ec7e57f9f3f9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80', 'Імплант Nobel + цирконієва коронка.', '4 місяці', 'Анна Кравцова')
+('Кейс 02: Імплантація', 'Відсутній зуб', 'https://images.unsplash.com/photo-1588776814546-ec7e57f9f3f9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80', 'Імплант Nobel + цирконієва коронка.', '4 місяці', 'Андрій Кравченко')
 ON CONFLICT DO NOTHING;
 
 INSERT INTO symptom_guides (symptom, urgency, what_to_do, service_name, priority) VALUES

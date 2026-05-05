@@ -353,7 +353,7 @@ function ProcessSection() {
 /* ── DOCTORS ────────────────────────────────────────────── */
 const DOCTORS = [
   {
-    name: 'Анна Кравцова',
+    name: 'Андрій Кравченко',
     role: 'Головний лікар, імплантолог',
     exp: '12 років досвіду',
     tags: ['Nobel Biocare', 'Straumann', '3D-хірургія'],

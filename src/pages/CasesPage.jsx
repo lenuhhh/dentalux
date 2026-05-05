@@ -18,7 +18,7 @@ const FALLBACK_CASES = [
     problem: 'Відсутній зуб',
     description: 'Повернули функцію жування і природну естетику.',
     duration: '4 місяці',
-    doctor_name: 'Анна Кравцова',
+    doctor_name: 'Андрій Кравченко',
     before_image_url: 'https://images.unsplash.com/photo-1588776814546-ec7e57f9f3f9?auto=format&fit=crop&w=900&q=80',
     after_image_url: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80',
   },
