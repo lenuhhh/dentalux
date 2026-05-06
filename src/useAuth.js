@@ -83,17 +83,21 @@ export function useAuth() {
     try {
       if (!isConfigured) {
         setUser({ email, id: 'mock-' + Date.now(), user_metadata: meta });
-        return { error: null };
+        return { error: null, session: { user: { email } } };
       }
-      const { error: err } = await supabase.auth.signUp({
+      const { data, error: err } = await supabase.auth.signUp({
         email,
         password,
         options: { data: meta },
       });
-      return { error: err };
+      // If Supabase has email confirmation disabled, a session is returned immediately
+      if (!err && data?.session) {
+        setUser(data.session.user);
+      }
+      return { error: err, session: data?.session || null };
     } catch (e) {
       console.error('Signup error:', e);
-      return { error: { message: 'Помилка реєстрації. Спробуйте ще раз.' } };
+      return { error: { message: 'Помилка реєстрації. Спробуйте ще раз.' }, session: null };
     }
   };
 

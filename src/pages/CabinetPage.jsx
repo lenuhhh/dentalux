@@ -28,7 +28,7 @@ function Avatar({ email, name, size = 48 }) {
 }
 
 export default function CabinetPage() {
-  const { user, logout } = useAuth();
+  const { user, loading: authLoading, logout } = useAuth();
   const navigate = useNavigate();
   const [tab, setTab] = useState('appointments');
   const [profile, setProfile] = useState({});
@@ -195,6 +195,14 @@ export default function CabinetPage() {
     await logout();
     navigate('/');
   };
+
+  if (authLoading) {
+    return (
+      <div className="cab-guest" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <span className="auth-btn__spinner" style={{ width: 40, height: 40, borderWidth: 4 }} />
+      </div>
+    );
+  }
 
   if (!user) {
     return (

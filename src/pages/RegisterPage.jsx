@@ -29,12 +29,16 @@ export default function RegisterPage() {
 
     setLoading(true);
     try {
-      const { error: err } = await signUp(email, password, { full_name: name, phone });
+      const { error: err, session } = await signUp(email, password, { full_name: name, phone });
       if (err) {
         setError(err.message || 'Помилка реєстрації');
+      } else if (session) {
+        // Email confirmation disabled — user is already logged in
+        navigate('/cabinet');
       } else {
+        // Email confirmation required — show success screen then go to login
         setSuccess(true);
-        setTimeout(() => navigate('/login'), 3000);
+        setTimeout(() => navigate('/login'), 4000);
       }
     } catch {
       setError('Помилка реєстрації. Спробуйте ще раз.');
